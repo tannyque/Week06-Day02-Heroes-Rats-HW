@@ -5,7 +5,7 @@ let hero;
 
 describe('Hero', function () {
   beforeEach(function () {
-    hero = new Hero('Upul', 20, 'Popcorn')
+    hero = new Hero('Upul', 'Popcorn')
   });
   it('should have a name', function () {
     const actual = hero.name;
