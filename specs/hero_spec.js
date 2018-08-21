@@ -5,7 +5,7 @@ let hero;
 
 describe('Hero', function () {
   beforeEach(function () {
-    hero = new Hero('Upul', 20, 'Popcorn', 'My name is Upul', 'Conquer')
+    hero = new Hero('Upul', 20, 'Popcorn')
   });
   it('should have a name', function () {
     const actual = hero.name;
@@ -20,7 +20,7 @@ describe('Hero', function () {
     assert.strictEqual(actual, 'Popcorn')
   });
   it('should be able to say its name', function () {
-    const actual = hero.talk;
-    assert.strictEqual(actual, 'My name is Upul')
+    const actual = "Hi! My name is Upul";
+    assert.strictEqual(actual, hero.greet())
   });
 })
