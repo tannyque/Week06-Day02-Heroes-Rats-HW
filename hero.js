@@ -5,3 +5,5 @@ const Hero = function (name, health, favourite_food, talk, tasks) {
   this.talk = talk;
   this.tasks = tasks;
 }
+
+module.exports = Hero;
