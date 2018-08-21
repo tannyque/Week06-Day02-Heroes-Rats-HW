@@ -1,5 +1,6 @@
 const assert = require('assert');
 const Hero = require('../hero.js');
+const Food = require('../food')
 
 let hero;
 
@@ -26,5 +27,11 @@ describe('Hero', function () {
   it('should have a collection of tasks', function () {
     const actual = hero.tasks;
     assert.deepStrictEqual(actual, [])
+  });
+  it('should replenish health', function () {
+    const food = new Food('Cheese', 5)
+    hero.eatFood(food)
+    const actual = hero.health;
+    assert.strictEqual(actual, 25)
   })
 })
