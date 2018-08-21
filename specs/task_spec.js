@@ -19,4 +19,8 @@ describe('Task', function () {
     const actual = task.reward;
     assert.strictEqual(actual, 500)
   });
+  // it('should be able to mark a task as completed', function () {
+  //   const actual = task.isTaskCompleted;
+  //   assert.strictEqual(actual, true)
+  // });
 })
