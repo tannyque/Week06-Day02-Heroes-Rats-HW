@@ -19,4 +19,8 @@ describe('Hero', function () {
     const actual = hero.favourite_food;
     assert.strictEqual(actual, 'Popcorn')
   });
+  it('should be able to say its name', function () {
+    const actual = hero.talk;
+    assert.strictEqual(actual, 'My name is Upul')
+  });
 })
