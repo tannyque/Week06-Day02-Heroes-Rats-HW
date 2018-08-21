@@ -15,4 +15,8 @@ describe('Task', function () {
     const actual = task.urgency;
     assert.strictEqual(actual, 8)
   });
+  it('should have a reward', function () {
+    const actual = task.reward;
+    assert.strictEqual(actual, 500)
+  });
 })
