@@ -11,4 +11,8 @@ describe('Hero', function () {
     const actual = hero.name;
     assert.strictEqual(actual, 'Upul')
   });
+  it('should have a number indicating its health', function () {
+    const actual = hero.health;
+    assert.strictEqual(actual, 20)
+  });
 })
