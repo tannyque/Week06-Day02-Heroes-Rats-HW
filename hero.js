@@ -1,7 +1,7 @@
-const Hero = function (name, health, favourite_food) {
+const Hero = function (name, health, favouriteFood) {
   this.name = name;
   this.health = health;
-  this.favourite_food = favourite_food;
+  this.favouriteFood = favouriteFood;
   this.tasks = [];
 }
 
