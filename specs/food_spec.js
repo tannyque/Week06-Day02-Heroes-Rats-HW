@@ -11,4 +11,8 @@ describe('Food', function () {
     const actual = food.name;
     assert.strictEqual(actual, 'Popcorn')
   });
+  it('should have a replenishment value', function () {
+    const actual = food.replenishment;
+    assert.strictEqual(actual, 5)
+  });
 })
