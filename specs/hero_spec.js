@@ -23,4 +23,8 @@ describe('Hero', function () {
     const actual = "Hi! My name is Upul";
     assert.strictEqual(actual, hero.greet())
   });
+  it('should have a collection of tasks', function () {
+    const actual = hero.tasks;
+    assert.deepStrictEqual(actual, [])
+  })
 })
