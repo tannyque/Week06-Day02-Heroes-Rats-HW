@@ -10,15 +10,12 @@ Hero.prototype.greet = function () {
 };
 
 Hero.prototype.eatFood = function (food) {
-  this.health += food.replenishment;
+  if(food.name === this.favouriteFood) {
+    this.health += food.replenishment * 1.5;
+  }
+  else{
+    this.health += food.replenishment;
+  }
 }
-
-//   if(food === this.favouriteFood){
-//     this.health += food.replenishment * 1.5;
-//   }
-//   else {
-//     this.health += food.replenishment;
-//   }
-// };
 
 module.exports = Hero;

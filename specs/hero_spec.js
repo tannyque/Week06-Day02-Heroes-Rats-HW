@@ -29,9 +29,9 @@ describe('Hero', function () {
     assert.deepStrictEqual(actual, [])
   });
   it('should replenish health', function () {
-    const food = new Food('Cheese', 5)
+    const food = new Food('Popcorn', 10)
     hero.eatFood(food)
     const actual = hero.health;
-    assert.strictEqual(actual, 25)
+    assert.strictEqual(actual, 35)
   })
 })
