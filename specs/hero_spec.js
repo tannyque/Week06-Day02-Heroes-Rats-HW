@@ -15,4 +15,8 @@ describe('Hero', function () {
     const actual = hero.health;
     assert.strictEqual(actual, 20)
   });
+  it('should have a favourite food', function () {
+    const actual = hero.favourite_food;
+    assert.strictEqual(actual, 'Popcorn')
+  });
 })
