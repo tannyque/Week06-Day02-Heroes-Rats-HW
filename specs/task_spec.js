@@ -11,4 +11,8 @@ describe('Task', function () {
     const actual = task.difficulty;
     assert.strictEqual(actual, 5)
   });
+  it('should have an urgency', function () {
+    const actual = task.urgency;
+    assert.strictEqual(actual, 8)
+  });
 })
