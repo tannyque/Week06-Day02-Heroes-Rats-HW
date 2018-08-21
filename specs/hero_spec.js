@@ -1,6 +1,7 @@
 const assert = require('assert');
 const Hero = require('../hero.js');
 const Food = require('../food')
+const Task = require('../task.js');
 
 let hero;
 
@@ -34,4 +35,14 @@ describe('Hero', function () {
     const actual = hero.health;
     assert.strictEqual(actual, 35)
   })
+  it('should count the number of tasks', function () {
+    const actual = hero.taskCount();
+    assert.strictEqual(actual, 0)
+  })
+  it('should add a task', function () {
+    const task = new Task(5, 8, 500)
+    hero.addTask(task);
+    const actual = hero.taskCount()
+    assert.strictEqual(actual, 1)
+  });
 })

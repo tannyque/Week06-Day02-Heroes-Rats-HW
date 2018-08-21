@@ -18,4 +18,16 @@ Hero.prototype.eatFood = function (food) {
   }
 }
 
+Hero.prototype.taskCount = function () {
+  return this.tasks.length
+};
+
+Hero.prototype.addTask = function (task) {
+  this.tasks.push(task);
+};
+
+// Hero.prototype.sortByDifficulty = function () {
+//
+// };
+
 module.exports = Hero;
