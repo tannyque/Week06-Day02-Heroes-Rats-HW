@@ -45,4 +45,14 @@ describe('Hero', function () {
     const actual = hero.taskCount()
     assert.strictEqual(actual, 1)
   });
+  xit('should be able to sort by difficulty', function () {
+    const task1 = new Task(5, 8, 500)
+    hero.addTask(task1)
+    const task2 = new Task(8, 3, 2000)
+    hero.addTask(task2)
+    const task3 = new Task(6, 5, 1250)
+    hero.addTask(task3)
+    // const actual = hero.tasks.sortByDifficulty();
+    assert.deepStrictEqual(hero.tasks, [task1, task3, task2])
+  })
 })

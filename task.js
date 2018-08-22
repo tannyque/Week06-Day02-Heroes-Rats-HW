@@ -5,8 +5,8 @@ const Task = function (difficulty, urgency, reward) {
   this.isTaskCompleted = false;
 }
 
-// Task.prototype.taskCompleted = function () {
-//   this.isTaskCompleted = true;
-// };
+Task.prototype.taskCompleted = function () {
+  this.isTaskCompleted = true;
+};
 
 module.exports = Task;
