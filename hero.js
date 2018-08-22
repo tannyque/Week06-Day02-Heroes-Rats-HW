@@ -10,7 +10,10 @@ Hero.prototype.greet = function () {
 };
 
 Hero.prototype.eatFood = function (food) {
-  if(food.name === this.favouriteFood) {
+  if(food.isPoisonous){
+    this.health -= food.replenishment;
+  }
+  else if(food.name === this.favouriteFood) {
     this.health += food.replenishment * 1.5;
   }
   else{
@@ -26,10 +29,18 @@ Hero.prototype.addTask = function (task) {
   this.tasks.push(task);
 };
 
-Hero.prototype.sortByDifficulty = function () {
+Hero.prototype.sortTasks = function (property) {
   this.tasks.sort(function (a, b) {
-    return a.difficulty-b.difficulty
+    return a[property] - b[property];
   })
+};
+
+Hero.prototype.getCompleteTasks = function () {
+  return this.tasks.filter(task => task.isTaskCompleted)
+};
+
+Hero.prototype.getIncompletedTasks = function () {
+  return this.tasks.filter(task => !task.isTaskCompleted)
 };
 
 module.exports = Hero;

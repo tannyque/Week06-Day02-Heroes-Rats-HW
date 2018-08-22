@@ -19,10 +19,13 @@ describe('Task', function () {
     const actual = task.reward;
     assert.strictEqual(actual, 500)
   });
+  it('should start a task as incompleted', function () {
+    const actual = task.isTaskCompleted;
+    assert.strictEqual(actual, false)
+  })
   it('should be able to mark a task as completed', function () {
     task.taskCompleted()
     const actual = task.isTaskCompleted;
-    // const notActual = (!actual)
     assert.strictEqual(actual, true)
   });
 })
