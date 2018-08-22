@@ -20,7 +20,8 @@ describe('Task', function () {
     assert.strictEqual(actual, 500)
   });
   it('should be able to mark a task as completed', function () {
-    const actual = task.taskCompleted();
+    task.taskCompleted()
+    const actual = task.isTaskCompleted;
     // const notActual = (!actual)
     assert.strictEqual(actual, true)
   });
